@@ -1,0 +1,104 @@
+.projects .header {
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-accent);
+  color: white;
+  border-bottom: 4px solid black;
+}
+
+.projects .header-content {
+  width: clamp(2rem, 80vw, 80rem);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.projects .title {
+  text-align: left;
+  margin-top: 2rem;
+  font-size: 3.9rem;
+}
+
+.projects .main {
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  grid-gap: 3rem;
+  padding: 3rem 0;
+  color: black;
+}
+
+.projects .content {
+  width: clamp(2rem, 80vw, 80rem);
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.projects .project-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.projects .project-item {
+  width: clamp(2rem, 80vw, 60rem);
+  padding: clamp(1.5rem, 2vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 4px solid black;
+  background-color: white;
+  box-shadow: 4px 4px;
+}
+
+.projects .project-item:hover, .project-item:focus {
+  box-shadow: 2px 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .projects .project-item {
+    flex-direction: column;
+  }
+}
+
+.projects .project-text {
+  flex: 1 1 0;
+}
+
+.projects .project-title {
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+}
+
+.projects .product-type {
+  font-size: 1rem;
+}
+
+.projects .description {
+  font-size: 1.5rem;
+}
+
+.projects .project-image-container {
+  flex: 2 1 0;
+  display: grid;
+  place-items: center;
+}
+
+.projects .project-image {
+  width: clamp(12rem, 45vw, 26rem);
+  height: clamp(12rem, 45vw, 26rem);
+}
+
+@media only screen and (min-width: 1200px) {
+  .projects .project-item {
+    width: clamp(2rem, 32.5vw, 32rem);
+  }
+
+  .projects .project-text {
+    flex: 1.5 1 0;
+  }
+  .projects .project-image {
+    width: clamp(12rem, 20vw, 26rem);
+    height: clamp(12rem, 20vw, 26rem);
+  }
+}

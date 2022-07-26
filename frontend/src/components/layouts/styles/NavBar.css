@@ -1,0 +1,37 @@
+.navbar {
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  box-shadow: 4px 4px;
+  max-width: 80rem;
+  text-align: center;
+}
+
+.navbar:hover {
+  box-shadow: 2px 2px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar li {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.navbar .link {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 0.5em;
+}
+
+.navbar .link:hover, .navbar.link:focus {
+  text-decoration: underline;
+}
