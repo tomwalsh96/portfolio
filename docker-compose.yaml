@@ -1,8 +1,9 @@
 version: "3.8"
 services:
   backend:
+    image: tomwalsh96/portfolio-backend
     build: ./backend
-    container_name: tomwalsh96-backend
+    container_name: portfolio-backend
     environment:
         FRONTEND_BASE_URL: http://frontend:80
     ports:
@@ -11,6 +12,7 @@ services:
     networks:
       - frontend
   frontend:
+    image: tomwalsh96/portfolio-frontend
     build: ./frontend
     container_name: tomwalsh96-frontend
     environment:
