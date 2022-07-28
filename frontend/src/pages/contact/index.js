@@ -16,9 +16,7 @@ export default function Contact() {
   };
 
   const handleSubmit = (event) => {
-    // prevents the submit button from refreshing the page
     event.preventDefault();
-    console.log(contactInfo);
     const requestOptions = {
       method: 'PUT'
     };
