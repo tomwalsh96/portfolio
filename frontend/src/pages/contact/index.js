@@ -1,6 +1,7 @@
 import './styles/index.css';
 import NavBar from '../../components/layouts/NavBar';
 import { useState } from 'react';
+import { API_BASE_URL } from '../../constants';
 
 export default function Contact() {
 
@@ -18,6 +19,20 @@ export default function Contact() {
     // prevents the submit button from refreshing the page
     event.preventDefault();
     console.log(contactInfo);
+    const requestOptions = {
+      method: 'PUT'
+    };
+    fetch(API_BASE_URL + `/api/v1/contact?name=${contactInfo.name}&fromEmail=${contactInfo.email}&body=${contactInfo.message}`, requestOptions)
+        .then(response => {
+          if (response.status === 200) {
+            let error = document.getElementsByClassName("error-message")[0];
+            error.style.display = "none";
+            setContactInfo({ name: "", email: "", message: "" });
+          } else {
+            let error = document.getElementsByClassName("error-message")[0];
+            error.style.display = "block";
+          }
+        })
   };
 
   return (
@@ -42,7 +57,8 @@ export default function Contact() {
                 placeholder="Name McNamerson"
                 tabIndex="1"
                 value={contactInfo.name}
-                onChange={handleChange}
+                onInput={handleChange}
+                required
               />
             </div>
             <div className="email">
@@ -53,7 +69,8 @@ export default function Contact() {
                 placeholder="example@email.com"
                 tabIndex="2"
                 value={contactInfo.email}
-                onChange={handleChange}
+                onInput={handleChange}
+                required
               />
             </div>
             <div className="message">
@@ -62,12 +79,17 @@ export default function Contact() {
                 placeholder="Your message..."
                 name="message"
                 tabIndex="3"
-                value={contactInfo.message}
-                onChange={handleChange}
+                value={contactInfo.message || ""}
+                onInput={handleChange}
+                required
               />
             </div>
             <div className="form-submit">
               <button type="submit" className="send">Send</button>
+            </div>
+            <div className="error-message">
+              <p>Error sending message.</p>
+              <p>If error continues please contact me at tomwalsh96@gmail.com.</p>
             </div>
           </form>
         </div>

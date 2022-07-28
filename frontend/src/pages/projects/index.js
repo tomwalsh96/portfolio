@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/index.css';
 import NavBar from '../../components/layouts/NavBar';
-import DeproLogo from '../../assets/images/depro_logo.png';
+import DeproLogo from '../../assets/images/depro_logo.svg';
 import { Link } from "react-router-dom";
 
 export default function Projects() {

@@ -45,7 +45,7 @@
   align-items: center;
 }
 
-.contact .name, .contact .email, .contact .message, .contact .form-submit {
+.contact .name, .contact .email, .contact .message, .contact .form-submit, .contact .error-message {
   width: clamp(60%, 50vw, 100%);
 }
 
@@ -81,4 +81,10 @@
 
 .contact .send:hover {
   box-shadow: 2px 2px;
+}
+
+.contact .error-message {
+  margin-top: 2rem;
+  color: red;
+  display: none;
 }
