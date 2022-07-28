@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    container_name: tomwalsh96-backend
+    environment:
+        FRONTEND_BASE_URL: http://frontend:80
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    networks:
+      - frontend
+  frontend:
+    build: ./frontend
+    container_name: tomwalsh96-frontend
+    environment:
+        API_BASE_URL: http://backend:8080
+    ports:
+      - 80:80
+    restart: unless-stopped
+    depends_on:
+      - backend
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    name: tomwalsh96-net
