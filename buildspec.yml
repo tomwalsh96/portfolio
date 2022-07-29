@@ -4,9 +4,9 @@ env:
     DOCKER_PW: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:password
     DOCKER_ID: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:username
 phases:
-  # install:
-  #   runtime-versions:
-  #     docker: latest
+  install:
+    runtime-versions:
+      docker: latest
   pre_build:
     commands:
       # # Install Snyk
