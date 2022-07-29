@@ -6,7 +6,7 @@ env:
 phases:
   install:
     runtime-versions:
-      docker: latest
+      docker
   pre_build:
     commands:
       # # Install Snyk
@@ -19,6 +19,8 @@ phases:
       # - echo Build client and backend docker images for testing...
       # - docker build -t lukondefmwila/react-test -f ./frontend/Dockerfile ./frontend
       # - docker build -t lukondefmwila/nodejs-test -f ./backend/Dockerfile.dev ./backend
+      # Log in to the Docker CLI
+      - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
   build:
     commands:
       - echo Build started on `date`
@@ -42,8 +44,8 @@ phases:
       - echo Building the production Docker image...
       - docker build ./frontend
       - docker build ./backend
-      # Log in to the Docker CLI
-      - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
+      # # Log in to the Docker CLI
+      # - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
   post_build:
     commands:
       # Take these images and push them to Docker hub
