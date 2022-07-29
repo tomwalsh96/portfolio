@@ -18,9 +18,15 @@ phases:
       - docker build -t tomwalsh96/portfolio-frontend ./frontend
       - chmod +x ./backend/mvnw
       - docker build -t tomwalsh96/portfolio-backend ./backend
+
+      # - docker-compose --file=docker-compose-prod.yml build
   post_build:
     commands:
       # Take these images and push them to Docker hub
       - echo Pushing the Docker images...
       - docker push tomwalsh96/portfolio-frontend
       - docker push tomwalsh96/portfolio-backend
+
+artifacts:
+  files:
+    - 'Dockerrun.aws.json'
