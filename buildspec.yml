@@ -16,7 +16,7 @@ phases:
       # Build the Docker images
       # - echo Building the production Docker image...
       # - docker build -t tomwalsh96/portfolio-frontend ./frontend
-      # - chmod +x ./backend/mvnw
+      - chmod +x ./backend/mvnw
       # - docker build -t tomwalsh96/portfolio-backend ./backend
 
       - docker-compose --file=docker-compose.yaml build
