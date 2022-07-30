@@ -24,7 +24,7 @@ services:
     build: 
       context: ./frontend
       args:
-        REACT_APP_API_BASE_URL: ${/backend}
+        REACT_APP_API_BASE_URL=/backend
     container_name: tomwalsh96-frontend
     # ports:
     #   - 3000:3000
