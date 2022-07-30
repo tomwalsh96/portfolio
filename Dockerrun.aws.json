@@ -6,6 +6,12 @@
       "image": "tomwalsh96/portfolio-frontend",
       "hostname": "frontend",
       "essential": true,
+      "environment": [
+        {
+          "name": "API_BASE_URL",
+          "value": "http://backend:8080"
+        }
+      ],
       "portMappings": [
         {
           "hostPort": 80,
