@@ -14,7 +14,8 @@ public class ContactController {
   @Autowired
   EmailSenderService emailSender;
 
-  @CrossOrigin(origins = {"http://localhost:3000", "http://frontend:80", "http://localhost", "http://frontend"})
+  // @CrossOrigin(origins = {"http://localhost:3000", "http://frontend:80", "http://localhost", "http://frontend"})
+  @CrossOrigin("*")
   @PutMapping("/v1/contact")
   public void sendEmail(
     @RequestParam(required = true) String fromEmail,
