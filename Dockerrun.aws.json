@@ -2,36 +2,31 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "frontend",
-      "image": "tomwalsh96/portfolio-frontend",
-      "hostname": "frontend",
+      "name": "nginx",
+      "image": "tomwalsh96/portfolio-nginx",
+      "hostname": "nginx",
       "essential": true,
-      "environment": [
-        {
-          "name": "API_BASE_URL",
-          "value": "http://backend:8080"
-        }
-      ],
       "portMappings": [
         {
           "hostPort": 80,
           "containerPort": 80
         }
       ],
-      "links": ["backend"],
+      "links": ["frontend", "backend"],
+      "memory": 100
+    },
+    {
+      "name": "frontend",
+      "image": "tomwalsh96/portfolio-frontend",
+      "hostname": "frontend",
+      "essential": false,
       "memory": 300
     },
     {
       "name": "backend",
       "image": "tomwalsh96/portfolio-backend",
       "hostname": "backend",
-      "essential": true,
-      "portMappings": [
-        {
-          "hostPort": 8080,
-          "containerPort": 8080
-        }
-      ],
+      "essential": false,
       "memory": 300
     }
   ]

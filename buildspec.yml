@@ -14,19 +14,21 @@ phases:
     commands:
       - echo Build started on `date`
       # Build the Docker images
-      # - echo Building the production Docker image...
-      # - docker build -t tomwalsh96/portfolio-frontend ./frontend
+      - echo Building the production Docker image...
+      - docker build -t tomwalsh96/portfolio-frontend ./frontend
       - chmod +x ./backend/mvnw
-      # - docker build -t tomwalsh96/portfolio-backend ./backend
+      - docker build -t tomwalsh96/portfolio-backend ./backend
+      - docker build -t tomwalsh96/portfolio-nginx ./nginx
 
-      - docker-compose --file=docker-compose.yaml build
+      # - docker-compose --file=docker-compose.yaml build
   post_build:
     commands:
       # Take these images and push them to Docker hub
-      # - echo Pushing the Docker images...
-      # - docker push tomwalsh96/portfolio-frontend
-      # - docker push tomwalsh96/portfolio-backend
-      - docker-compose --file=docker-compose.yaml build
+      - echo Pushing the Docker images...
+      - docker push tomwalsh96/portfolio-frontend
+      - docker push tomwalsh96/portfolio-backend
+      - docker push tomwalsh96/portfolio-nginx
+      # - docker-compose --file=docker-compose.yaml build
 
 artifacts:
   files:

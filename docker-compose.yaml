@@ -1,30 +1,40 @@
 version: "3.8"
 services:
+  nginx:
+    depends_on:
+      - backend
+      - frontend
+    restart: always # because it is routing traffic to our entire app
+    build: ./nginx
+    ports:
+      - '80:80'
   backend:
     image: tomwalsh96/portfolio-backend
     build: ./backend
     container_name: portfolio-backend
-    environment:
-        FRONTEND_BASE_URL: http://frontend:80
-    ports:
-      - 8080:8080
-    restart: unless-stopped
-    networks:
-      - frontend
+    # environment:
+    #     FRONTEND_BASE_URL: http://frontend:80
+    # ports:
+    #   - 8080:8080
+    restart: on-failure
+    # networks:
+    #   - frontend
   frontend:
     image: tomwalsh96/portfolio-frontend
     build: ./frontend
     container_name: tomwalsh96-frontend
-    environment:
-        API_BASE_URL: http://backend:8080
-    ports:
-      - 80:80
-    restart: unless-stopped
+    # environment:
+    #     API_BASE_URL: http://backend:8080
+    # ports:
+    #   - 3000:3000
+    volumes:
+      - /app/node_modules
+    restart: on-failure
     depends_on:
       - backend
-    networks:
-      - frontend
+    # networks:
+    #   - frontend
 
-networks:
-  frontend:
-    name: tomwalsh96-net
+# networks:
+#   frontend:
+#     name: tomwalsh96-net
