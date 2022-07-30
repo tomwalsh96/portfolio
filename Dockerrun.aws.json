@@ -12,6 +12,7 @@
           "containerPort": 80
         }
       ],
+      "links": ["backend"],
       "memory": 300
     },
     {
@@ -25,7 +26,6 @@
           "containerPort": 8080
         }
       ],
-      "links": ["frontend"],
       "memory": 300
     }
   ]
