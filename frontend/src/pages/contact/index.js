@@ -1,7 +1,7 @@
 import './styles/index.css';
 import NavBar from '../../components/layouts/NavBar';
 import { useState } from 'react';
-import { API_BASE_URL } from '../../constants';
+import { REACT_APP_API_BASE_URL } from '../../constants';
 
 export default function Contact() {
 
@@ -16,11 +16,12 @@ export default function Contact() {
   };
 
   const handleSubmit = (event) => {
+    console.log(process.env.REACT_APP_API_BASE_URL);
     event.preventDefault();
     const requestOptions = {
       method: 'PUT'
     };
-    fetch(API_BASE_URL + `/api/v1/contact?name=${contactInfo.name}&fromEmail=${contactInfo.email}&body=${contactInfo.message}`, requestOptions)
+    fetch(REACT_APP_API_BASE_URL + `/api/v1/contact?name=${contactInfo.name}&fromEmail=${contactInfo.email}&body=${contactInfo.message}`, requestOptions)
         .then(response => {
           if (response.status === 200) {
             let error = document.getElementsByClassName("error-message")[0];

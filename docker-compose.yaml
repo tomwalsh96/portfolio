@@ -21,10 +21,11 @@ services:
     #   - frontend
   frontend:
     image: tomwalsh96/portfolio-frontend
-    build: ./frontend
+    build: 
+      context: ./frontend
+      args:
+        REACT_APP_API_BASE_URL: /backend
     container_name: tomwalsh96-frontend
-    # environment:
-    #     API_BASE_URL: http://backend:8080
     # ports:
     #   - 3000:3000
     volumes:
