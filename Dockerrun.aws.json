@@ -20,7 +20,13 @@
       "image": "tomwalsh96/portfolio-frontend",
       "hostname": "frontend",
       "essential": false,
-      "memory": 300
+      "memory": 300,
+      "environment": [
+        {
+          "name": "REACT_APP_API_BASE_URL",
+          "value": "/backend"
+        }
+      ]
     },
     {
       "name": "backend",
