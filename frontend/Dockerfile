@@ -26,7 +26,7 @@ COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Arguments
 ARG REACT_APP_API_BASE_URL
-ENV REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL}
+ENV REACT_APP_API_BASE_URL=/backend
 
 # Expose port 80 to the Docker host, so we can access it 
 # from the outside.
