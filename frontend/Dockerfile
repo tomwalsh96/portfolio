@@ -7,6 +7,9 @@ RUN npm install
 
 COPY . .
 
+ARG REACT_APP_API_BASE_URL=/backend
+ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
+
 RUN npm run build
 
 FROM nginx:1.17.0-alpine
