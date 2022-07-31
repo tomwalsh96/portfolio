@@ -2,6 +2,7 @@ package tomwalsh96.portfolio.backend;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ public class ContactController {
   EmailSenderService emailSender;
 
   // @CrossOrigin(origins = {"http://localhost:3000", "http://frontend:80", "http://localhost", "http://frontend"})
-  @CrossOrigin("*")
+  @CrossOrigin
   @PutMapping("/v1/contact")
   public void sendEmail(
     @RequestParam(required = true) String fromEmail,
@@ -23,6 +24,12 @@ public class ContactController {
     @RequestParam(required = true) String body
   ) {
     emailSender.sendSimpleEmail(fromEmail, name, body);
+  }
+
+  @CrossOrigin
+  @GetMapping("/v1/greeting")
+  public String greeting() {
+    return "Hello World!";
   }
 
 }

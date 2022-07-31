@@ -21,7 +21,7 @@ export default function Contact() {
     const requestOptions = {
       method: 'PUT'
     };
-    fetch(`http://backend/api/v1/contact?name=${contactInfo.name}&fromEmail=${contactInfo.email}&body=${contactInfo.message}`, requestOptions)
+    fetch(`/backend/api/v1/contact?name=${contactInfo.name}&fromEmail=${contactInfo.email}&body=${contactInfo.message}`, requestOptions)
         .then(response => {
           if (response.status === 200) {
             let error = document.getElementsByClassName("error-message")[0];
