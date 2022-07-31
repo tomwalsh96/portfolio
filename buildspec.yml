@@ -19,7 +19,7 @@ phases:
       - echo Building the production Docker image...
       - docker build -t tomwalsh96/portfolio-frontend ./frontend
       - chmod +x ./backend/mvnw
-      - docker build -e "EMAIL_SERVICE_USERNAME=$EMAIL_SERVICE_USERNAME" -e "EMAIL_SERVICE_PASSWORD=$EMAIL_SERVICE_PASSWORD" -t tomwalsh96/portfolio-backend ./backend
+      - docker build --env EMAIL_SERVICE_USERNAME=$EMAIL_SERVICE_USERNAME --env EMAIL_SERVICE_PASSWORD=$EMAIL_SERVICE_PASSWORD -t tomwalsh96/portfolio-backend ./backend
       - docker build -t tomwalsh96/portfolio-nginx ./nginx
 
       # - docker-compose --file=docker-compose.yaml build
