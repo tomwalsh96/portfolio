@@ -1,8 +1,10 @@
 version: 0.2
 env:
   secrets-manager:
-    DOCKER_PW: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:password
     DOCKER_ID: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:username
+    DOCKER_PW: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:password
+    EMAIL_SERVICE_USERNAME: arn:aws:secretsmanager:eu-west-1:241645008159:secret:tomwalsh96_email_service-Fhz0WE:username
+    EMAIL_SERVICE_PASSWORD: arn:aws:secretsmanager:eu-west-1:241645008159:secret:tomwalsh96_email_service-Fhz0WE:password
 phases:
   install:
     runtime-versions:
@@ -17,7 +19,7 @@ phases:
       - echo Building the production Docker image...
       - docker build -t tomwalsh96/portfolio-frontend ./frontend
       - chmod +x ./backend/mvnw
-      - docker build -t tomwalsh96/portfolio-backend ./backend
+      - docker build --build-arg "EMAIL_SERVICE_USERNAME=$EMAIL_SERVICE_USERNAME" --build-arg "EMAIL_SERVICE_PASSWORD=$EMAIL_SERVICE_PASSWORD" -t tomwalsh96/portfolio-backend ./backend
       - docker build -t tomwalsh96/portfolio-nginx ./nginx
 
       # - docker-compose --file=docker-compose.yaml build

@@ -16,7 +16,6 @@ export default function Contact() {
   };
 
   const handleSubmit = (event) => {
-    console.log(process.env.REACT_APP_API_BASE_URL);
     event.preventDefault();
     const requestOptions = {
       method: 'PUT'
