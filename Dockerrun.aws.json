@@ -27,7 +27,13 @@
       "image": "tomwalsh96/portfolio-backend",
       "hostname": "backend",
       "essential": false,
-      "memory": 300
+      "memory": 300,
+      "portMappings": [
+        {
+          "hostPort": 587,
+          "containerPort": 587
+        }
+      ]
     }
   ]
 }
