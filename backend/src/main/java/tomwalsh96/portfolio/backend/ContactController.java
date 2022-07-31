@@ -18,12 +18,13 @@ public class ContactController {
   // @CrossOrigin(origins = {"http://localhost:3000", "http://frontend:80", "http://localhost", "http://frontend"})
   @CrossOrigin
   @PutMapping("/v1/contact")
-  public void sendEmail(
+  public String sendEmail(
     @RequestParam(required = true) String fromEmail,
     @RequestParam(required = true) String name,
     @RequestParam(required = true) String body
   ) {
-    emailSender.sendSimpleEmail(fromEmail, name, body);
+    // emailSender.sendSimpleEmail(fromEmail, name, body);
+    return name + " has sent a message";
   }
 
   @CrossOrigin
