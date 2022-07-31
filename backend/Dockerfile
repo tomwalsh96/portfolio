@@ -33,4 +33,4 @@ ARG EMAIL_SERVICE_PASSWORD
 ENV EMAIL_SERVICE_USERNAME=${EMAIL_SERVICE_USERNAME}
 ENV EMAIL_SERVICE_PASSWORD=${EMAIL_SERVICE_PASSWORD}
  
-ENTRYPOINT ["java","-cp","app:app/lib/*", "-spring.mail.username=${EMAIL_SERVICE_USERNAME} -spring.mail.username=${EMAIL_SERVICE_PASSWORD}","tomwalsh96.portfolio.backend.BackendApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","tomwalsh96.portfolio.backend.BackendApplication"]
