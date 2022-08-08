@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <nav className="navbar">
-      <ul>
+      <ul className="menu">
         <li><Link className="link" to="/">Resume</Link></li>
         <li><Link className="link" to="/projects">Projects</Link></li>
         <li><Link className="link" to="/blog">Blog</Link></li>
