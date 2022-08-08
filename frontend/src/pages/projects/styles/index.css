@@ -29,6 +29,7 @@
 }
 
 .projects .content {
+  overflow: hidden;
   width: clamp(2rem, 80vw, 80rem);
   display: flex;
   justify-content: flex-start;
