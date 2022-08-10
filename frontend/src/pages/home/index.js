@@ -1,7 +1,6 @@
 import React from 'react';
 import NavBar from '../../components/layouts/NavBar';
 import './styles/index.css';
-import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
 export default function Home() {
