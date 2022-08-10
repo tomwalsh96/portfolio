@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Sansation';
+  font-style: normal;
+  font-weight: normal;
+  src: local('sansation-regular-v2'), url('./assets/fonts/sansation-regular-v2/sansation-regular-v2.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #86BAD4;
+}
+
+:root {
+  --clr-primary: #86BAD4;
+  --clr-accent: #2F4999;
+
+  --ff-main: 'Sansation', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+  font-family: var(--ff-main);
+  font-size: 1.125rem;
+}
+
+img {
+  display: block;
+}
+
+/* Typography */
+
+/* add font-family, line-height, font size etc for h's and p */
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0.5em;
+}

@@ -1,0 +1,37 @@
+version: 0.2
+env:
+  secrets-manager:
+    DOCKER_ID: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:username
+    DOCKER_PW: arn:aws:secretsmanager:eu-west-1:241645008159:secret:docker_hub-VWxTPE:password
+    EMAIL_SERVICE_USERNAME: arn:aws:secretsmanager:eu-west-1:241645008159:secret:tomwalsh96_email_service-Fhz0WE:username
+    EMAIL_SERVICE_PASSWORD: arn:aws:secretsmanager:eu-west-1:241645008159:secret:tomwalsh96_email_service-Fhz0WE:password
+phases:
+  install:
+    runtime-versions:
+      docker: latest
+  pre_build:
+    commands:
+      - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
+  build:
+    commands:
+      - echo Build started on `date`
+      # Build the Docker images
+      - echo Building the production Docker image...
+      - docker build -t tomwalsh96/portfolio-frontend ./frontend
+      - chmod +x ./backend/mvnw
+      - docker build --build-arg "EMAIL_SERVICE_USERNAME=$EMAIL_SERVICE_USERNAME" --build-arg "EMAIL_SERVICE_PASSWORD=$EMAIL_SERVICE_PASSWORD" -t tomwalsh96/portfolio-backend ./backend
+      - docker build -t tomwalsh96/portfolio-nginx ./nginx
+
+      # - docker-compose --file=docker-compose.yaml build
+  post_build:
+    commands:
+      # Take these images and push them to Docker hub
+      - echo Pushing the Docker images...
+      - docker push tomwalsh96/portfolio-frontend
+      - docker push tomwalsh96/portfolio-backend
+      - docker push tomwalsh96/portfolio-nginx
+      # - docker-compose --file=docker-compose.yaml build
+
+artifacts:
+  files:
+    - 'Dockerrun.aws.json'

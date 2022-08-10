@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  nginx:
+    depends_on:
+      - backend
+      - frontend
+    restart: always
+    build: ./nginx
+    ports:
+      - '80:80'
+  backend:
+    image: tomwalsh96/portfolio-backend
+    build: ./backend
+    container_name: portfolio-backend
+    restart: on-failure
+  frontend:
+    image: tomwalsh96/portfolio-frontend
+    build: 
+      context: ./frontend
+    #   args:
+    #     REACT_APP_API_BASE_URL=/backend
+    # environment:
+    #   - REACT_APP_API_BASE_URL=/backend
+    container_name: tomwalsh96-frontend
+    volumes:
+      - /app/node_modules
+    restart: on-failure
