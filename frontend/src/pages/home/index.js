@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../../components/layouts/NavBar';
 import './styles/index.css';
 import { Link } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 
 export default function Home() {
   return (
@@ -15,8 +16,20 @@ export default function Home() {
             <p className="greeting3">Dublin, Ireland</p>
           </div>
           <div className="header-buttons">
-            <Link className="button-link" to="/contact"><div className="say-hi-button">Say Hi 👋</div></Link>
-            <Link className="button-link" to="/projects"><div className="projects-button">Projects</div></Link>
+            <div className="social-button-background">
+              <SocialIcon
+                className="social-button"
+                url="https://github.com/tomwalsh96"
+                target="_blank"
+              />
+            </div>
+            <div className="social-button-background">
+              <SocialIcon
+                className="social-button"
+                url="https://linkedin.com/in/tomwalsh96"
+                target="_blank"
+                />
+            </div>
           </div>
         </div>
       </header>
