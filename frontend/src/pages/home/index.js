@@ -44,7 +44,7 @@ export default function Home() {
             </div>
           </div>
           <div className="content-item">
-          <h2 className="content-heading">Education</h2>
+            <h2 className="content-heading">Education</h2>
             <div className="content-body">
               <h3 className="item-heading">MSc Computer Science</h3>
               <h4>University College Dublin</h4>
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
           </div>
           <div className="content-item">
-          <h2 className="content-heading">Experience</h2>
+            <h2 className="content-heading">Experience</h2>
             <div className="content-body">
               <h3 className="item-heading">Research Practicum</h3>
               <h4>University College Dublin</h4>
@@ -84,17 +84,6 @@ export default function Home() {
               <p>Helped in the early design of a new company website.</p>
             </div>
           </div>
-          {/* <div className="content-item">
-          <h2 className="content-heading">Accomplishements</h2>
-            <div className="content-body">
-              <h3>2nd place - Bank of Ireland FX Trade-Off</h3>
-              <p>2017</p>
-              <p>A forex trading competition was held by Bank of Ireland in partnership with Share Navigator.</p>
-              <p>My result was a time-weighted return of 40.9% over a five-week trading period.</p>
-              <p>My success can be attributed to a strong interest in geopolitics and an ability for adaptive 
-              learning to discern patterns/trends.</p>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

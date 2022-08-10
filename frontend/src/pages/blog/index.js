@@ -20,7 +20,7 @@ export default function Blog() {
               <p>Some thoughts, as they happen.</p>
             </div>
           </div> */}
-          <p>Nohing to show here yet...</p>
+          <p>Nothing to show here yet...</p>
         </div>
       </div>
     </div>
