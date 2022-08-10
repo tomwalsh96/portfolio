@@ -34,7 +34,8 @@ export default function Home() {
           <div className="content-item">
           <h2 className="content-heading">Education</h2>
             <div className="content-body">
-              <h3>MSc Computer Science | University College Dublin - Dublin, Ireland</h3>
+              <h3>MSc Computer Science</h3>
+              <h4>University College Dublin</h4>
               <p>2020 - 2022</p>
               <p>Covered a wide range of topics from software engineering to data science, some modules I chose in the final
               semester include data mining, big data programming, machine learning, and distributed systems.</p>
@@ -44,7 +45,8 @@ export default function Home() {
               <br/>
               <hr/>
               <br/>
-              <h3>Bachelor of Commerce | University College Dublin - Dublin, Ireland</h3>
+              <h3>Bachelor of Commerce</h3>
+              <h4>University College Dublin</h4>
               <p>2015 - 2019</p>
               <p>Particular interest in modules focused on financial markets and information technology.</p>
             </div>
@@ -52,7 +54,8 @@ export default function Home() {
           <div className="content-item">
           <h2 className="content-heading">Experience</h2>
             <div className="content-body">
-              <h3>Research Practicum Group Project | UCD - Dublin, Ireland</h3>
+              <h3>Research Practicum</h3>
+              <h4>University College Dublin</h4>
               <p>05/2021 - 08/2021</p>
               <p>Full-time research and development group project, tasked with creating a replacement app for Dublin Bus with
               more accurate travel time predictions.</p>
@@ -60,7 +63,8 @@ export default function Home() {
               <br/>
               <hr/>
               <br/>
-              <h3>Marketing Intern | Mission Ridge Ski Resort - Wenatchee, Washington, USA</h3>
+              <h3>Marketing Internship</h3>
+              <h4>Mission Ridge Ski Resort - Washington, USA</h4>
               <p>01/2020 - 03/2020</p>
               <p>Created copy and design for marketing material such as newsletters and social media.</p>
               <p>Used Mailchimp to send targeted emails containing promotions, news and updates.</p>
@@ -68,7 +72,7 @@ export default function Home() {
               <p>Helped in the early design of a new company website.</p>
             </div>
           </div>
-          <div className="content-item">
+          {/* <div className="content-item">
           <h2 className="content-heading">Accomplishements</h2>
             <div className="content-body">
               <h3>2nd place - Bank of Ireland FX Trade-Off</h3>
@@ -78,7 +82,7 @@ export default function Home() {
               <p>My success can be attributed to a strong interest in geopolitics and an ability for adaptive 
               learning to discern patterns/trends.</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
