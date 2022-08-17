@@ -37,11 +37,17 @@ export default function Home() {
           <div className="content-item">
             <h2 className="content-heading">About Me</h2>
             <div className="content-body">
-              <div className="section">
-                <p>A junior Software Engineer with an entrepreneurial streak.</p>
-                <p>A lifelong learner with a keen interest in all aspects of technology, I am always looking to push
-                my boundaries and find my next challenge to tackle.</p>
-              </div>
+              <p>A junior Software Engineer with an entrepreneurial streak.</p>
+              <p>A lifelong learner with a keen interest in all aspects of technology, I am always looking to push
+              my boundaries and find my next challenge to tackle.</p>
+              <p>I am a recent MSc Computer Science graduate, with many years of self taught programming under my belt. 
+              Since graduation I have spent my time expanding my expertise into tools and languages not covered extensively 
+              in the course.</p>
+              <p>As I become increasingly comfortable with building quality production ready apps, I have begun the process of
+              designing and releasing real world projects.</p>
+              <p>I will use this personal website to document my professional progress, and to showcase my new projects as they 
+              are released to the public.</p>
+              <p>Stayed tuned!</p>
             </div>
           </div>
           <div className="content-item">

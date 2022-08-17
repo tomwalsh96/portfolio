@@ -37,24 +37,39 @@
   flex-wrap: wrap;
 }
 
-/* .blog .blog-item {
-  margin: 0 100px 70px 100px;
-  padding: 40px;
+.blog .blog-heading {
+  font-size: 1.3rem;
+}
+
+.blog .time {
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+.blog .blog-item {
+  width: clamp(2rem, 80vw, 80rem);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1635px) {
+  .blog .blog-item {
+    width: 35rem;
+  }
+  .blog .blog-body {
+    flex-grow: 1;
+  }
+}
+
+.blog .blog-body {
   border: 4px solid black;
   background-color: white;
   box-shadow: 4px 4px;
   text-align: left;
+  padding: 2rem;
 }
 
-.blog .blog-title {
-  font-size: 50px;
-  margin: 0;
+.blog .section {
+  margin: 1rem 0;
 }
-
-.blog .blog-date {
-  font-size: 15px;
-}
-
-.blog .blog-content {
-  font-size: 20px;
-} */
