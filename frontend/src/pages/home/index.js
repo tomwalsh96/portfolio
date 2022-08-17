@@ -37,10 +37,11 @@ export default function Home() {
           <div className="content-item">
             <h2 className="content-heading">About Me</h2>
             <div className="content-body">
-              <p>A junior Software Engineer with an entrepreneurial streak.</p>
-              <p>I am a lifelong learner with an interest in all aspects of technology.</p>
-              <p>Through my personal and professional life I continuously look for ways to automate processes
-              through technology.</p>
+              <div className="section">
+                <p>A junior Software Engineer with an entrepreneurial streak.</p>
+                <p>A lifelong learner with a keen interest in all aspects of technology, I am always looking to push
+                my boundaries and find my next challenge to tackle.</p>
+              </div>
             </div>
           </div>
           <div className="content-item">
@@ -49,18 +50,21 @@ export default function Home() {
               <h3 className="item-heading">MSc Computer Science</h3>
               <h4>University College Dublin</h4>
               <p className="time">2020 - 2022</p>
-              <p>Covered a wide range of topics from software engineering to data science, some modules I chose in the final
-              semester include data mining, big data programming, machine learning, and distributed systems.</p>
-              <p>Focus on Python, with exposure to other languages such as Javascript, Java and Bash.</p>
-              <p>Many group projects completed, use of agile development methodologies and git for code management.</p>
-              <p>3.61 GPA (0 - 4.2 scale)</p>
-              <br/>
+              <div className="item">
+                <p>Covered a wide range of topics from software engineering to data science.</p>
+                <p>Languages included Java, Python, Javascript, Bash.</p>
+                <p>Frameworks included Django, React, Spring Boot, Hadoop, Spark.</p>
+                <p>Hands-on with AWS products.</p>
+                <p>Many group projects using agile development methodologies and git for code management.</p>
+                <p>3.61 GPA (0 - 4.2 scale)</p>
+              </div>
               <hr/>
-              <br/>
               <h3 className="item-heading">Bachelor of Commerce</h3>
               <h4>University College Dublin</h4>
               <p className="time">2015 - 2019</p>
-              <p>Particular interest in modules focused on financial markets and information technology.</p>
+              <div className="item">
+                <p>Particular interest in modules focused on financial analysis and information technology.</p>
+              </div>
             </div>
           </div>
           <div className="content-item">
@@ -69,19 +73,45 @@ export default function Home() {
               <h3 className="item-heading">Research Practicum</h3>
               <h4>University College Dublin</h4>
               <p className="time">05/2021 - 08/2021</p>
-              <p>Full-time research and development group project, tasked with creating a replacement app for Dublin Bus with
-              more accurate travel time predictions.</p>
-              <p>I took charge of frontend development, code quality management and data analysis.</p>
-              <br/>
+              <div className="item">
+                <p>Mobile-first web app using Django, React and MySQL. Deployed using docker-compose on AWS EC2.</p>
+                <p>Full-time research and development group project, tasked with creating a replacement app for Dublin Bus with
+                more accurate travel time predictions.</p>
+                <p>My tasks included leading frontend development and code quality management, as well as helping with data
+                analysis</p>
+              </div>
               <hr/>
-              <br/>
               <h3 className="item-heading">Marketing Internship</h3>
               <h4>Mission Ridge Ski Resort - Washington, USA</h4>
               <p className="time">01/2020 - 03/2020</p>
-              <p>Created copy and design for marketing material such as newsletters and social media.</p>
-              <p>Used Mailchimp to send targeted emails containing promotions, news and updates.</p>
-              <p>Completed first draft marketing performance reports for my supervisor.</p>
-              <p>Helped in the early design of a new company website.</p>
+              <div className="item">
+                <p>Created copy and design for marketing material such as newsletters and social media.</p>
+                <p>Used Mailchimp to send targeted emails containing promotions, news and updates.</p>
+                <p>Completed first draft marketing performance reports for my supervisor.</p>
+                <p>Helped in the early design of a new company website.</p>
+              </div>
+            </div>
+          </div>
+          <div className="content-item">
+            <h2 className="content-heading">Skills</h2>
+            <div className="content-body">
+              <h3 className="item-heading">Web Development, Full Stack</h3>
+              <div className="item">
+                <p>I have experience across a wide range of development stacks.</p>
+                <p>React, Vue, Svelte, Node, Spring, serverless, MySQL, NoSQL</p>
+                <p>CI/CD using Docker and AWS Codepipline</p>
+              </div>
+              <hr/>
+              <h3 className="item-heading">Project Coordination</h3>
+              <div className="item">
+                <p>Agile methodology using Scrum, Jira, Git etc.</p>
+                <p>Strict code review process.</p>
+              </div>
+              <hr/>
+              <h3 className="item-heading">Data Analytics</h3>
+              <div className="item">
+                <p>From real world data to actionable models, including cleaning and training using CRISP-DM process.</p>
+              </div>
             </div>
           </div>
         </div>
