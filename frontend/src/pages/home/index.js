@@ -59,9 +59,10 @@ export default function Home() {
               <div className="item">
                 <p>Covered a wide range of topics from software engineering to data science.</p>
                 <p>Languages included Java, Python, Javascript, Bash.</p>
-                <p>Frameworks included Django, React, Spring Boot, Hadoop, Spark.</p>
+                <p>Frameworks/libraries included Django, React, Spring Boot, Hadoop, Pandas, Sklearn, Matplotlib.</p>
                 <p>Hands-on with AWS products.</p>
-                <p>Many group projects using agile development methodologies and git for code management.</p>
+                <p>A microservices project built using Spring Boot and deployed with kubernetes.</p>
+                <p>An NLP project using Hadoop to train a fake news classifier using tfidf-vectorization and linear regression.</p>
                 <p>3.61 GPA (0 - 4.2 scale)</p>
               </div>
               <hr/>
@@ -85,6 +86,8 @@ export default function Home() {
                 more accurate travel time predictions.</p>
                 <p>My tasks included leading frontend development and code quality management, as well as helping with data
                 analysis</p>
+                <p>Data tasks involved preprocessing, understanding and modelling 2017 bus arrival-time data using tools 
+                such pandas and sklearn.</p>
               </div>
               <hr/>
               <h3 className="item-heading">Marketing Internship</h3>
@@ -114,9 +117,11 @@ export default function Home() {
                 <p>Strict code review process.</p>
               </div>
               <hr/>
-              <h3 className="item-heading">Data Analytics</h3>
+              <h3 className="item-heading">Data Science</h3>
               <div className="item">
                 <p>From real world data to actionable models, including cleaning and training using CRISP-DM process.</p>
+                <p>Can process and model data using Python libraries pandas and sklearn, and plot using matplotlib.</p>
+                <p>Experience re-engineering sklearn built-in algorithms for specific use cases.</p>
               </div>
             </div>
           </div>
