@@ -84,8 +84,7 @@ export default function Home() {
                 <p>Mobile-first web app using Django, React and MySQL. Deployed using docker-compose on AWS EC2.</p>
                 <p>Full-time research and development group project, tasked with creating a replacement app for Dublin Bus with
                 more accurate travel time predictions.</p>
-                <p>My tasks included leading frontend development and code quality management, as well as helping with data
-                analysis</p>
+                <p>Tasks included frontend development, code quality management and data science.</p>
                 <p>Data tasks involved preprocessing, understanding and modelling 2017 bus arrival-time data using tools 
                 such pandas and sklearn.</p>
               </div>
@@ -107,8 +106,8 @@ export default function Home() {
               <h3 className="item-heading">Web Development, Full Stack</h3>
               <div className="item">
                 <p>I have experience across a wide range of development stacks.</p>
-                <p>React, Vue, Svelte, Node, Spring, serverless, MySQL, NoSQL</p>
-                <p>CI/CD using Docker and AWS Codepipline</p>
+                <p>React, Vue, Svelte, Node, Spring, serverless, MySQL, NoSQL.</p>
+                <p>CI/CD using Docker and AWS Codepipline.</p>
               </div>
               <hr/>
               <h3 className="item-heading">Project Coordination</h3>

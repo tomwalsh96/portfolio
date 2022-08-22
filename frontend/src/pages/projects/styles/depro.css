@@ -13,6 +13,30 @@
   padding: 2rem 1rem 1rem 1rem;
 }
 
+.depro .header-title {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.depro .project-image {
+  height: 7.6rem;
+}
+
+.depro .demo-link {
+  display: flex;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.depro .header-title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .depro .title {
   text-align: left;
   margin-top: 2rem;
