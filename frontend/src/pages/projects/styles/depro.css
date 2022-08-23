@@ -15,13 +15,14 @@
 
 .depro .header-title {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin: 0.5rem 0 0.5rem 0;
+  margin: 2.5rem 0 0.5rem 0;
 }
 
 .depro .project-image {
-  height: 7.6rem;
+  height: 10rem;
 }
 
 .depro .demo-link {
@@ -35,11 +36,11 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .depro .title {
   text-align: left;
-  margin-top: 2rem;
   font-size: 3.9rem;
 }
 
